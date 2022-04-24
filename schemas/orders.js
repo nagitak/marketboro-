@@ -6,11 +6,19 @@ const orderSchema = new mongoose.Schema(
         //     type: String,
         //     unique: true,
         // },
-        product: {
+        productName: {
+            type: Array,
+            required: true,
+        },
+        productCount: {
             type: Array,
             required: true,
         },
         orderStatus: {
+            type: String,
+            require: true,
+        },
+        userID: {
             type: String,
             require: true,
         },

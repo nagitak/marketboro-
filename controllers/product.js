@@ -2,7 +2,7 @@ const Product = require('../schemas/products');
 
 exports.postProduct = async (req, res, next) => {
     const { name, price } = req.body;
-    const { user } = res.locals;
+    // const { user } = res.locals;
     try {
         await Product.create({
             name,
