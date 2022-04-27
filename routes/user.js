@@ -1,9 +1,11 @@
-// const express = require('express');
-// const router = express.Router();
-// const userController = require('../controllers/user');
+const express = require('express');
+const router = express.Router();
+const auth = require('../middlewares/auth');
+const userController = require('../controllers/user');
 
-// router.post('/user/post', userController.postOrder);
-// router.patch('/user/modify/:orderId', orderController.modifyOrder);
-// router.delete('/user/delete/:orderId', orderController.deleteOrder);
+router.post('/user/signup', userController.userSignup);
+router.post('/user/login', userController.login);
+router.patch('/user/modifyPW', auth, userController.modifyPassword);
+router.post('/user/find', userController.sendEmail);
 
-// module.exports = router;
+module.exports = router;
