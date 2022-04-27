@@ -34,5 +34,5 @@ app.use(
 );
 
 app.listen(port, () => {
-    console.log(port, '포트로 연결되었습니다.');
+    console.log('서버가 연결되었습니다.');
 });
